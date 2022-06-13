@@ -25,9 +25,6 @@ class Task(db.Model):
     editable = db.Column(db.Boolean(), nullable=False)
 
 
-db.create_all()
-db.session.commit()
-
 
 @app.route('/finish_task/<int:task_id>')
 def finish_task(task_id):
