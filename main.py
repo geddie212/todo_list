@@ -74,8 +74,6 @@ def add_task():
 
 @app.route('/')
 def home():
-    db.create_all()
-    db.session.commit()
     all_tasks = Task.query.all()
     return render_template('index.html', tasks=all_tasks)
 
